@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer'
 import HomeContainer from './pages/home_container/HomeContainer';
 import Bus from './pages/bus/Bus';
 import Details from './pages/bus/Details';
+import Checkout from './pages/checkout/Checkout';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/' element={<HomeContainer />} />
             <Route path='/bus' element={<Bus />} />
             <Route path='/bus/bus-details' element={<Details />} />
+            <Route path='/bus/bus-details/checkout' element={<Checkout />} />
           </Routes>
           {/* Footer */}
           <Footer />

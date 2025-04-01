@@ -9,7 +9,7 @@ const DepartTime = () => {
   return (
     <div className='w-full space-y-4'>
     {
-        !isDestinationSelected ?
+        !departBus?
             (
                 <div className='w-full grid-cols-2 gap-10'>
                     <div>
@@ -28,37 +28,15 @@ const DepartTime = () => {
                             <option value="location3">Location 3</option>
                         </select>
                     </div>
-                    <div>
-                        <label htmlFor="to" className="block mb-2 font-semibold">To</label>
-                        <select
-                            name='to'
-                            id='to'
-                            value={to}
-                            onChange={handleToChange}
-                            aria-label="Select Departure Location"
-                            className='w-full appearance-none bg-neutral-200/60 dark:bg-neutral-900/60 px-3 h-11 rounded-md focus:outline-none'
-                        >
-                            <option value="">Select Location</option>
-                            <option value="location4">Location 4</option>
-                            <option value="location5">Location 5</option>
-                            <option value="location6">Location 6</option>
-                        </select>
-                    </div>
                 </div>
             ) : (
                 <div className="space-y-5">
-                    <h1 className="text-xl text-neutral-800 dark:text-neutral-100 font-medium">
-                        Your Destination
-                    </h1>
                     <div className="w-full flex items-center gap-x-3">
                         <div className="w-fit text-base font-semibold">
-                            From:- <span className="ml-1.5 font-medium">{from}</span>
+                            Bus Depart at:- <span className="ml-1.5 font-medium">{departBus}</span>
                         </div>
-                        <div className="w-full h-[1px] border border-dashed border-neutral-200 dark:border-neutral-800/80">
-                        <div className="w-fit text-base font-semibold">
-                            To:- <span className="ml-1.5 font-medium">{to}</span>
-                        </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             )

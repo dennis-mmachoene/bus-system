@@ -3,6 +3,8 @@ import Bus from '../../assets/bus9.png'
 import { FaStar } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import Destination from '../../components/destination/Destination'
+import DepartTime from '../../components/departtime/DepartTime'
+import BusSeatLayout from '../../components/seat/Seat'
 const Details = () => {
     return (
         <div className='w-full lg:px-28 md:px-16 sm:px-7 px-4 mb-[10ch] mt-[13ch]'>
@@ -36,10 +38,11 @@ const Details = () => {
                         {/* Destination Card */}
                         <Destination />
                         {/* Depature Card */}
+                        <DepartTime />
                     </div>
 
                     {/* Seat Selection */}
-
+                    <BusSeatLayout />
                     {/* Checkout Button */}
                     <div className="flex">
                         <Link className='w-fit bg-violet-600 text-neutral-50 font-medium text-base px-6 py-2 rounded-md hover:bg-violet-700 ease-in-out duration-300' to={'/bus/bus-details/checkout'}>
